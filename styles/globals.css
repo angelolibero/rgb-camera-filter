@@ -29,11 +29,17 @@ html, body {
   pointer-events: none;
 }
 
-
-.filters {
+.filters-wrapper {
   position: absolute;
   left: 0;
   top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.filters {
   display: flex;
   gap: 8px;
   z-index: 2;
@@ -41,8 +47,6 @@ html, body {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   margin: 8px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .filters .filter-button {

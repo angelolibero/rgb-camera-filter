@@ -21,11 +21,13 @@ export default function Home() {
         <div class="wrapper">
           <video id="videoFeed" playsInline autoPlay loop muted controls={false}></video>
           <div id="filter-color" className={"filter " + color}></div>
-          <div class="filters">
-            <div className={"filter-button " + (!color && 'current')} style={{ backgroundColor: "rgba(255,255,255,1)" }} onClick={() => changeFilter()}> </div>
-            <div className={"filter-button " + (color == 'red' && 'current')} style={{ backgroundColor: "rgba(255,0,0,1)" }} onClick={() => changeFilter('red')}> </div>
-            <div className={"filter-button " + (color == 'green' && 'current')} style={{ backgroundColor: "rgba(0,255,0,1)" }} onClick={() => changeFilter('green')}> </div>
-            <div className={"filter-button " + (color == 'blue' && 'current')} style={{ backgroundColor: "rgba(0,0,255,1)" }} onClick={() => changeFilter('blue')}> </div>
+          <div className='filters-wrapper'>
+            <div class="filters">
+              <div className={"filter-button " + (!color && 'current')} style={{ backgroundColor: "rgba(255,255,255,1)" }} onClick={() => changeFilter()}> </div>
+              <div className={"filter-button " + (color == 'red' && 'current')} style={{ backgroundColor: "rgba(255,0,0,1)" }} onClick={() => changeFilter('red')}> </div>
+              <div className={"filter-button " + (color == 'green' && 'current')} style={{ backgroundColor: "rgba(0,255,0,1)" }} onClick={() => changeFilter('green')}> </div>
+              <div className={"filter-button " + (color == 'blue' && 'current')} style={{ backgroundColor: "rgba(0,0,255,1)" }} onClick={() => changeFilter('blue')}> </div>
+            </div>
           </div>
         </div>
       </main>
