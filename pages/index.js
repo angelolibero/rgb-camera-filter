@@ -29,7 +29,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <script src="/script.js"></script>
+      <script src="/script.js" async />
     </div>
   )
 }
