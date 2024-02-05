@@ -29,6 +29,7 @@ html, body {
   pointer-events: none;
 }
 
+
 .filters {
   position: absolute;
   left: 0;
@@ -39,7 +40,9 @@ html, body {
   padding: 8px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50px;
-  margin: 8px
+  margin: 8px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .filters .filter-button {
@@ -48,6 +51,11 @@ html, body {
   border-radius: 100px;
   pointer-events: all;
   cursor: pointer;
+}
+
+.filters .filter-button.current {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
 }
 
 .red {

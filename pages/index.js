@@ -1,12 +1,12 @@
 import Head from 'next/head'
+import { useState } from 'react';
 
 export default function Home() {
 
+  const [color, setColor] = useState()
+
   const changeFilter = (color) => {
-    if (typeof window !== 'undefined') {
-      console.log(document.getElementById("filter-color"));
-      document.getElementById("filter-color").className = "filter " + color;
-    }
+    setColor(color)
   }
 
   return (
@@ -20,12 +20,12 @@ export default function Home() {
       <main>
         <div class="wrapper">
           <video id="videoFeed" playsInline autoPlay loop muted controls={false}></video>
-          <div id="filter-color"></div>
+          <div id="filter-color" className={"filter " + color}></div>
           <div class="filters">
-            <div class="filter-button" style={{ backgroundColor: "rgba(255,255,255,1)" }} onClick={() => changeFilter('')}> </div>
-            <div class="filter-button" style={{ backgroundColor: "rgba(255,0,0,1)" }} onClick={() => changeFilter('red')}> </div>
-            <div class="filter-button" style={{ backgroundColor: "rgba(0,255,0,1)" }} onClick={() => changeFilter('green')}> </div>
-            <div class="filter-button" style={{ backgroundColor: "rgba(0,0,255,1)" }} onClick={() => changeFilter('blue')}> </div>
+            <div className={"filter-button " + (!color && 'current')} style={{ backgroundColor: "rgba(255,255,255,1)" }} onClick={() => changeFilter()}> </div>
+            <div className={"filter-button " + (color == 'red' && 'current')} style={{ backgroundColor: "rgba(255,0,0,1)" }} onClick={() => changeFilter('red')}> </div>
+            <div className={"filter-button " + (color == 'green' && 'current')} style={{ backgroundColor: "rgba(0,255,0,1)" }} onClick={() => changeFilter('green')}> </div>
+            <div className={"filter-button " + (color == 'blue' && 'current')} style={{ backgroundColor: "rgba(0,0,255,1)" }} onClick={() => changeFilter('blue')}> </div>
           </div>
         </div>
       </main>
