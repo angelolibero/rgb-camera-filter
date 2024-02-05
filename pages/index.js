@@ -19,7 +19,7 @@ export default function Home() {
 
       <main>
         <div class="wrapper">
-          <video id="videoFeed" autoPlay loop muted playsInline></video>
+          <video id="videoFeed" playsInline autoPlay loop muted ></video>
           <div id="filter-color"></div>
           <div class="filters">
             <div class="filter-button" style={{ backgroundColor: "rgba(255,255,255,1)" }} onClick={() => changeFilter('')}> </div>
